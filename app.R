@@ -131,7 +131,8 @@ server <- function(input, output, session) {
                        popup = ~ifelse(!is.na(XC), paste0(year, " - ", "<a href = 'http://xeno-canto.org/", XC, "' target=\"_blank\">XC", XC, "</a>"), paste0(year, " - WTSP Project Recording")),
                        stroke = FALSE,
                        group = "Triplets") %>%
-      addLayersControl(overlayGroups = c("Doublets", "Triplets", "Unknown"),options = layersControlOptions(collapsed = FALSE))
+      addLayersControl(overlayGroups = c("Doublets", "Triplets", "Unknown"),
+                       options = layersControlOptions(collapsed = FALSE))
   })
   
   observeEvent(s(), {
@@ -145,21 +146,24 @@ server <- function(input, output, session) {
                          color = "black",
                          fillOpacity = 1,
                          popup = ~ifelse(!is.na(XC), paste0(year, " - ", "<a href = 'http://xeno-canto.org/", XC, "' target=\"_blank\">XC", XC, "</a>"), paste0(year, " - WTSP Project Recording")),
-                         stroke = FALSE) %>%
+                         stroke = FALSE,
+                         group = "Unknown") %>%
         addCircleMarkers(data = s()[s()$strophe.type == "Doublet",],
                          lat = ~lat, lng = ~lon,
                          radius = 6,
                          color = ~pal_doublet(year),
                          fillOpacity = 0.8,
                          popup = ~ifelse(!is.na(XC), paste0(year, " - ", "<a href = 'http://xeno-canto.org/", XC, "' target=\"_blank\">XC", XC, "</a>"), paste0(year, " - WTSP Project Recording")),
-                         stroke = FALSE) %>%
+                         stroke = FALSE,
+                         group = "Doublets") %>%
         addCircleMarkers(data = s()[s()$strophe.type == "Triplet",],
                          lat = ~lat, lng = ~lon,
                          radius = 6,
                          color = ~pal_triplet(year),
                          fillOpacity = 0.8,
                          popup = ~ifelse(!is.na(XC), paste0(year, " - ", "<a href = 'http://xeno-canto.org/", XC, "' target=\"_blank\">XC", XC, "</a>"), paste0(year, " - WTSP Project Recording")),
-                         stroke = FALSE)               
+                         stroke = FALSE,
+                         group = "Triplets")               
       ## Remove markers if no data to plot
     } else if(nrow(s()) == 0){
       suppressMessages(
