@@ -2,7 +2,8 @@ name: maps
 title:
 account: steffilazerte
 server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
 appId: 80160
-bundleId: 622290
+bundleId: 1521160
 url: https://steffilazerte.shinyapps.io/maps/
-when: 1479828799.95287
+when: 1533579122.82309
