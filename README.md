@@ -1,5 +1,7 @@
 
-Leaflet/Shiny Maps showing variation in white-throated sparrow song types
+## wtsp_maps
+
+**Leaflet/Shiny Maps showing variation in white-throated sparrow song types**
 
 shinyapps.io: <https://steffilazerte.shinyapps.io/maps/>  
 Website: <http://whitethroatsong.ca>  
