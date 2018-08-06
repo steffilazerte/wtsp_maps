@@ -1,0 +1,91 @@
+body, input, button, select, h1, h2, h3, h4 { 
+    padding: 6px 0px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    color: #555;
+}
+
+h4 {
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    border: 1px; 
+    font-weight: bold;
+    box: 0;
+}
+
+
+#controls {
+    padding: 6px 8px;
+    margin: 0px;
+    background: white;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#control-label {
+  margin: 0px;
+  padding: 0px;
+}
+
+img.leaflet-tile {
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+}
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend svg text {
+    fill: #555;
+}
+.legend svg line {
+    stroke: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+}
+
+.grad {
+  height: 18px;
+  width: 75px;
+  float: left;
+  margin-right: 8px;
+  margin-left: 15px;
+}
+
+#triplet {
+  background: #CC0000; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #FFFFFF, #CC0000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #FFFFFF, #CC0000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #FFFFFF, #CC0000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #FFFFFF, #CC0000); /* Standard syntax */
+}
+
+#doublet {
+  background: #FFFF00; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #FFFFFF, #FFFF00); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #FFFFFF, #FFFF00); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #FFFFFF, #FFFF00); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #FFFFFF, #FFFF00); /* Standard syntax */
+}
+
+#unknown {
+  background: #FFFF00; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #FFFFFF, #000000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #FFFFFF, #000000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #FFFFFF, #000000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #FFFFFF, #000000); /* Standard syntax */
+}
